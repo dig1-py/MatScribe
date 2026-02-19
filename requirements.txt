@@ -1,0 +1,13 @@
+streamlit
+pinecone-client
+langchain-pinecone
+langchain-huggingface
+transformers
+torch
+pdfplumber
+pillow
+qwen-vl-utils
+accelerate
+bitsandbytes
+torchvision
+sentence-transformers
