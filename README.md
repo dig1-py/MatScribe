@@ -8,7 +8,7 @@ By processing both textual data and complex visual elements (such as charts, tab
 ## Key Features
 * **Multimodal Data Ingestion:** Utilizes Vision-Language Models (Qwen2-VL) to parse and interpret text, tabular data, and scientific figures from unstructured PDFs.
 * **Agentic Self-Correction Loop:** Implements a state machine consisting of a Retriever, Extractor, and Auditor. The Auditor independently verifies extracted claims against the source text to minimize AI hallucinations.
-* **Semantic Search with Metadata:** Uses a Pinecone vector database with metadata filtering (e.g., page numbers, document source) to ensure high-precision context retrieval.
+* **Semantic Search:** Leverages the LangChain-Pinecone integration to manage embeddings and execute high-precision similarity searches across the document knowledge base.
 * **Hardware-Optimized UI:** Features a Streamlit dashboard with a conditional compute toggle, allowing users to bypass heavy image processing when only text extraction is required.
 
 ## System Architecture
@@ -22,6 +22,6 @@ The application follows a cyclic, agentic workflow:
 * **Orchestration:** LangChain, LangGraph
 * **Vision & Language Models:** Qwen2-VL-2B-Instruct
 * **Embeddings:** HuggingFaceEmbeddings (all-MiniLM-L6-v2)
-* **Vector Database:** Pinecone Serverless
+* **Vector Database:** Pinecone 
 * **Document Processing:** pdfplumber, PIL
 * **Frontend:** Streamlit
